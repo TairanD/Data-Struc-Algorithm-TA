@@ -1,6 +1,7 @@
 <body style="font-family: serif"></body>
 
-# Introduction & Revision
+# Introduction & Revision 
+(_**Completed**_)
 
 ## 1 - Why Data Structure & Algorithm
 

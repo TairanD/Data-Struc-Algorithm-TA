@@ -4,7 +4,7 @@ This repository comprises materials related to the specific course, Data Structu
 Beijing-Dublin International College, University College Dublin. Within this repository, I aim to share my personal
 notes, reflections, and various programs from the course. It is essential to note that these resources are not identical
 reproductions of the professor's slides or definitions; instead, they represent my individual comprehension and
-insights.
+insights. Additionally, I might add some contents I think useful/important.
 
 If you have any problem, you can email me (tairan.ding@ucdconnect.ie), or you can directly ask me in the lab. I hope
 this repo can help you understand the course better.
