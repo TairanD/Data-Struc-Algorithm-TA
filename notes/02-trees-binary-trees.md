@@ -93,6 +93,15 @@ public interface ITree<T> {
 ```
 
 ### 4.2 - Iterator (Java)
+Iterator is important and very common-used in your future coding projects. It is a Java build-in interface with the aim to
+traverse a sequence of element. 
+- `public boolean hasNext();`: an Iterator method that returns a boolean value
+  - true if and only if (iff) there is another element available.
+  - false iff there is not
+- `public T next();`: an Iterator method that returns the next element in the sequence. When you firstly call this method,
+it will return the first element as the 'next element'.
+
+
 
 # Binary Trees
 
