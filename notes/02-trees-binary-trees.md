@@ -45,6 +45,7 @@ For a node _n_:
   - if _n_ is an external node, its height = 0
   - elif _n_ is an internal node, its height = 1 + the maximum height of _n_'s child
   - Note: Height of the tree = height of the root node
+  - Also, the height of _n_ is the deepest path's amount of node (not include itself).
 
 ## 4 - Define a Tree ADT: ITree
 ### 4.1 - IPosition (Java)
