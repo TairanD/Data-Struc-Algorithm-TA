@@ -38,7 +38,7 @@ potentially less suitable for others (like finding). We will delve into these as
 
 ## 4 - Tree's Properties (this part will definitely appear in your test :)
 For a node _n_:
-- Depth (level) of _n_: the number of nodes above v (excluding v itself). E.g. the depth of a root is zero.
+- Depth (level) of _n_: the number of nodes above v (v's ancestors excluding v itself). E.g. the depth of a root is zero.
 - Degree of _n_: the number of children of _n_. E.g. the degree of an external node is zero.
 - Height of a tree T: the maximum depth of an external node of T.
 - Height of _n_: 
