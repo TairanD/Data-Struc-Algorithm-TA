@@ -53,8 +53,8 @@ For a node _n_:
   - Note: Height of the tree = height of the root node
   - Also, the height of _n_ is the deepest path's amount of node (not include itself).
 
-## 4 - Define a Tree ADT: ITree <a name="treeadt"></a>
-### 4.1 - IPosition (Java)
+## 5 - Define a Tree ADT: ITree <a name="treeadt"></a>
+### 5.1 - IPosition (Java)
 - Naming convention: all interfaces starts with a capital "I", separating interfaces from classes
 - Position: a **Position** is an abstraction for storing an element within a data structure. Consider nodes in the tree as one specific form 
 of **Position**.
@@ -110,7 +110,7 @@ public interface ITree<T> {
 }
 ```
 
-### 4.2 - Iterator (Java)
+### 5.2 - Iterator (Java)
 Iterator is important and very common-used in your future coding projects. It is a Java build-in interface with the aim to
 traverse a sequence of element. 
 - `public boolean hasNext();`: an Iterator method that returns a boolean value
