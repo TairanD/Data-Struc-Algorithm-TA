@@ -107,6 +107,20 @@ it will return the first element as the 'next element'.
 # Binary Trees
 
 ## 1 - Definition
+A binary tree is a special type of tree, which have following additional properties:
+1. Every node has at most 2 children (degree <= 2).
+2. A node's children have order
+   1. they're labelled as being either a left child or a right child.
+   2. a left child comes **BEFORE** a right child i.e. whenever we have to process the children of a node, we do the left one first, 
+then the right.
+
+*Note: furthermore, we define a Binary Tree in which all nodes have degree 0 or 2 as Proper Binary Tree.
+
+## 2 - Binary Trees' Level Property
+Level d of a binary tree is the set of all nodes with 
+depth d, of which there are at most 2d nodes.
+
+
 
 ## 2 - Binary Trees ADT
 
