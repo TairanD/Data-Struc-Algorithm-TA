@@ -4,11 +4,11 @@
 (_**Updating**_)
 
 1. [Definition](#definition)
-2. [Why Trees?](#WhyTrees)
-3. [Terminology](#Terminology)
-4. [Tree's Properties](#Properties)
+2. [Why Trees?](#why trees?)
+3. [Terminology](#terminology)
+4. [Tree's Properties](#properties)
 
-## 1 - Definition <a name="definition"></a>
+## 1 - Definition 
 - A tree is an Abstract Data Type (ADT) that stores data **hierarchically** in **nodes**. Look at the example tree below, it looks like a
 family tree. In fact, they are similar. Our tree ADTs also use a lot of terminology from family trees.
 <div align="center">
