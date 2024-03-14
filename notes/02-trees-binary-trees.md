@@ -3,7 +3,12 @@
 # Trees
 (_**Updating**_)
 
-## 1 - Definition
+1. [Definition](#definition)
+2. [Why Trees?](#WhyTrees)
+3. [Terminology](#Terminology)
+4. [Tree's Properties](#Properties)
+
+## 1 - Definition <a name="definition"></a>
 - A tree is an Abstract Data Type (ADT) that stores data **hierarchically** in **nodes**. Look at the example tree below, it looks like a
 family tree. In fact, they are similar. Our tree ADTs also use a lot of terminology from family trees.
 <div align="center">
@@ -12,14 +17,14 @@ family tree. In fact, they are similar. Our tree ADTs also use a lot of terminol
 
 - Formal Definition: a tree is a hierarchical ADT where data is related in terms of parent-child relationships.
 
-## 2 - Why Trees?
+## 2 - Why Trees? <a name="WhyTrees"></a>
 In the [introduction](./01-intro.md) I emphasized the crucial role of learning data structures for developers, and now, 
 you can tell why. Tree data structure can make lots of algorithms much faster relying on its special structure. Ofcourse it also
 has disadvantages. Their utility is highly task-dependent, proving immensely advantageous for certain applications (like searching) while
 potentially less suitable for others (like finding). We will delve into these aspects shortly.
 
 
-## 3 - Terminology
+## 3 - Terminology <a name="Terminology"></a>
 - Root: the only node with no parent.
 - Siblings: nodes that have the same parent.
 - Internal Nodes: any node that has one or more children.
@@ -36,7 +41,7 @@ potentially less suitable for others (like finding). We will delve into these as
 <img src="img/subtree.png" width = "300">
 </div>
 
-## 4 - Tree's Properties (this part will definitely appear in your test :)
+## 4 - Tree's Properties (this part will definitely appear in your test :) <a name="Properties"></a>
 For a node _n_:
 - Depth (level) of _n_: the number of nodes above v (v's ancestors excluding v itself). E.g. the depth of a root is zero.
 - Degree of _n_: the number of children of _n_. E.g. the degree of an external node is zero.
@@ -77,19 +82,30 @@ and it is compatible to multiple types (String, Integer, Person) of data.
 
 So, using generic, we can define our ITree, where T is a generic type. It refers to the types of elements that will be 
 stored in this tree:
-``` 
+``` javascript
 public interface ITree<T> {
- public IPosition<T> root();
- public IPosition<T> parent(IPosition<T> n);
- public Iterator<IPosition<T>> children(IPosition<T> n);
- public boolean isInternal(IPosition<T> n);
- public boolean isExternal(IPosition<T> n);
- public boolean isRoot(IPosition<T> n);
- public int size();
- public boolean isEmpty();
- public Iterator<T> iterator();
- public Iterator<IPosition<T>> nodes();
- public T replace(IPosition<T> n, T e);
+  // returns the position for the root of the tree
+  public IPosition<T> root(); 
+  // returns the position of p’s parent
+  public IPosition<T> parent(IPosition<T> n); 
+  // returns an iterator of the positions of p’s children
+  public Iterator<IPosition<T>> children(IPosition<T> n);
+  // returns true iff p has children (p is an internal node)
+  public boolean isInternal(IPosition<T> n);
+  // returns true iff p a leaf (p is an external node)
+  public boolean isExternal(IPosition<T> n);
+  // returns true iff p==root()
+  public boolean isRoot(IPosition<T> n);
+  // returns the amount of nodes
+  public int size();
+  // returns true iff the tree is empty
+  public boolean isEmpty();
+  // returns an iterator of every element in the tree
+  public Iterator<T> iterator();
+  // returns an iterator of every position in the tree
+  public Iterator<IPosition<T>> nodes();
+  // replaces the element at position p with e
+  public T replace(IPosition<T> n, T e);
 }
 ```
 
@@ -119,9 +135,59 @@ then the right.
 ## 2 - Binary Trees' Level Property
 Level d of a binary tree is the set of all nodes with 
 depth d, of which there are at most 2d nodes.
-
+<div align="center">
+<img src="img/level-property.png" width = "500">
+</div>
 
 
 ## 2 - Binary Trees ADT
 
-## 3 - Implementation
+Except operations of Tree ADT, Binary Tree ADT has 4 extra operations:
+```
+public interface IBinaryTree<T> extends ITree<T> {
+  public IPosition <T> left(IPosition <T> p);
+  public IPosition <T> right(IPosition <T> p);
+  public boolean hasLeft(IPosition <T> p);
+  public boolean hasRight(IPosition<T> p);
+}
+```
+#### *Note: 
+- Do u still remember what keyword `extends` means? 
+  - Here, `extends` indicates IBinaryTree **interface** contains all the methods from ITree **interface**.
+  - It can be also used to create inherited relationship between **classes**.
+- How about keyword `implement`? 
+  - `implement` means one **class** must implement all the methods in an **interface**.
+
+## 3 - Implementation: Link-Based Binary Tree
+
+### 3.1 - Visual Structure
+You may have noticed that we still have any methods to add / remove a node from the tree. Based on different implement
+strategy, the parameters of methods add & remove may not be the same. 
+
+For example, if we adopt array-based binary tree, 
+we may need two int parameter representing index and value respectively. Here, let's see a more common-used implement 
+strategy for tree (link-based strategy). 
+
+The following diagram presents the structure of such a tree:
+<div align="center">
+<img src="img/linkBinaryTree.png" width = "500">
+</div>
+
+- each position possesses:
+  - parent node
+  - left node
+  - right node
+  - value stored inside it
+
+To simplify the implementation process, instead of implementing linked binary tree, let's implement Proper Linked Binary 
+Tree.
+
+### 3.2 - Implementation: Link-Based Proper Binary Tree
+To further simplify the question, we define that
+- **only internal nodes can hold data**.
+### 3.3 - method _expandExternal(p,e)_ (add nodes)
+*Note that `expandExternal(p,e)` means adding nodes at the position of a leaf node, instead of inserting (we will learn how to insert at next file).
+
+To do that, we need to expand 
+
+
