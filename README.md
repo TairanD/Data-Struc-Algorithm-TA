@@ -12,3 +12,7 @@ insights. Additionally, I might add some contents I think useful/important.
 
 If you have any problem, you can email me (tairan.ding@ucdconnect.ie), or you can directly ask me in the lab. I hope
 this repo can help you understand the course better.
+
+Star this repo if it helps！
+
+[![GitHub stars](https://img.shields.io/github/stars/TairanD/Data-Struc-Algorithm-TA?style=social)](https://github.com/TairanD/Data-Struc-Algorithm-TA/stargazers)
