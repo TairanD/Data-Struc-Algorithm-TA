@@ -15,4 +15,4 @@ this repo can help you understand the course better.
 
 Star this repo if it helps！
 
-[![GitHub stars](https://img.shields.io/github/stars/{TairanD}/{Data-Struc-Algorithm-TA}?style=social)](https://github.com/{TairanD}/{Data-Struc-Algorithm-TA}/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/TairanD/Data-Struc-Algorithm-TA?style=social)](https://github.com/TairanD/Data-Struc-Algorithm-TA/stargazers)
