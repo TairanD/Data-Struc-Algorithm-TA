@@ -1,7 +1,7 @@
 <body style="font-family: serif"></body>
 
 # Binary Trees
-(_**Updating**_)
+(_**Finished**_)
 1. [Definition](#definition)
 2. [Binary Trees' Level Property](#2)
 3. [Binary Trees ADT](#3)
@@ -64,13 +64,43 @@ The following diagram presents the structure of such a tree:
   - right node
   - value stored inside it
 
-To simplify the implementation process, instead of implementing linked binary tree, let's implement Proper Linked Binary 
+To simplify the implementation process, instead of implementing linked binary tree, let's implement two methods in Proper Linked Binary 
 Tree.
 
 ### 4.2 - Implementation: Link-Based Proper Binary Tree
-To further simplify the question, we define that
-- **only internal nodes can hold data**.
-### 4.3 - method _expandExternal(p,e)_ (add nodes)
-*Note that `expandExternal(p,e)` means adding nodes at the position of a leaf node, instead of inserting (we will learn how to insert at next file).
+We define that (further simplify the question): only internal nodes can hold data.
 
-To do that, we need to expand 
+#### 4.2.1 - _expandExternal(p,e)_
+- Create two new empty positions (i.e. that have no elements) and add them 
+as the left and right children of _p_, and store element e at _p_. An error occurs if _p_ is not external.
+
+*Note: `expandExternal(p,e)` means adding nodes at the position of a leaf node (internal nodes cannot be expanded), instead of inserting. We will learn 
+how to insert later. 
+
+#### 4.2.2 - _remove(p)_
+- If the left child of node _p_ is external, remove _p_ and its left child, then replace _p_ with the right child. 
+- If the right child is external, remove _p_ and its right child, then replace it with the left child. Error if both 
+children are internal or _p_ is external.
+
+*Note: `remove(p)` can only remove an internal node with at least one external child can be removed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

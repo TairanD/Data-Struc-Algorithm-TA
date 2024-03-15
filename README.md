@@ -8,7 +8,7 @@ insights. Additionally, I might add some contents I think useful/important.
 
 - [Introduction & Revision](./notes/01-intro.md)
 - [Trees](./notes/02-trees.md)
-- [Binary Trees](./notes/03-binary-trees)
+- [Binary Trees](./notes/03-binary-trees.md)
 
 If you have any problem, you can email me (tairan.ding@ucdconnect.ie), or you can directly ask me in the lab. I hope
 this repo can help you understand the course better.
