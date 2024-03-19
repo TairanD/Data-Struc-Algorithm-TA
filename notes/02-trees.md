@@ -68,18 +68,20 @@ there is nothing left in your head.
 Based on the importance of this concept and its utility in your future labs and assignments,
 let's quickly review the concept of generics (泛型) 
 
-#### * Quick Revision: generics
+### * Quick Revision: generics
 - Why generics? - Because we want data structures compatible to multiple types of data.
 - What's generics? - A technique allowing us to replace actual types (like String) with **type parameter** 
   - Type parameter: one or more symbols wrapped by `<>` , in the above case, `T`.
-- How generics achieves our expectation? - By specify type parameter behind class name when we create a variable,
-the type parameter will become the specified type. Take our familiar ArrayList<E> as an example. We only need to define ArrayList for once, 
-and it is compatible to multiple types (String, Integer, Person) of data.
-  ```
-  ArrayList<String> = strList;
-  ArrayList<Integer> = intList;
-  ArrayList<Person> = personList;
-  ```
+- How generics achieves our expectation? 
+  - By specifying type parameter behind class name when we create a variable, the type parameter will become the specified type. 
+    - A.k.a. the type parameter are replaced by actual types when the code is instantiated or called
+  - Take our familiar ArrayList<E> as an example. We only need to define ArrayList for once, 
+  and it is compatible to multiple types (String, Integer, Person) of data.
+    ```
+    ArrayList<String> = strList;
+    ArrayList<Integer> = intList;
+    ArrayList<Person> = personList;
+    ```
 
 So, using generic, we can define our ITree, where T is a generic type. It refers to the types of elements that will be 
 stored in this tree:
