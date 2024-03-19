@@ -1,5 +1,5 @@
 # Tree Traversal
-(_**Updating**_)
+(_**Completed**_)
 
 1. [Definition](#1)
 2. [Recursion](#2)

@@ -13,7 +13,7 @@ insights. Additionally, I might add some contents I think useful/important.
 - [Tree Traversals](./notes/04-tree-traversals.md)
 - [Binary Search Trees](./notes/05-binary-search-tree.md)
 
-If you have any problem, you can email me (tairan.ding@ucdconnect.ie), or you can directly ask me in the lab. I hope
+If you have any problem, you can post your question on the Discussion part of this repo, or you can directly ask me in the lab. I hope
 this repo can help you understand the course better.
 
 Star this repo if it helps！

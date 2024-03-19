@@ -1,7 +1,7 @@
 <body style="font-family: serif"></body>
 
 # Binary Trees
-(_**Finished**_)
+(_**Completed**_)
 1. [Definition](#definition)
 2. [Binary Trees' Level Property](#2)
 3. [Binary Trees ADT](#3)

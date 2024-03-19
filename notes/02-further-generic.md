@@ -1,4 +1,6 @@
 # Generics
+(_**Completed**_)
+
 In the lab course last week, I found out a lot of you were still confused about the practices
 of **Generics**. Let's talk about it a little more.
 ## 1 - Conceptual Introduction
@@ -44,7 +46,8 @@ public interface List<T> {
 ```
 
 ### 2.4 - Generic Inheritance
-A generic class can extend another generic class and pass type parameters (the type parameters of the parent class must be passed to the subclass). For example:
+A generic class can extend another generic class and pass type parameters (the type parameters of the parent class must 
+be passed to the subclass). For example:
 ```java
 public class MyBox<T> extends FatherBox<T> {
     // Implement specific methods
