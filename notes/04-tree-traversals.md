@@ -25,7 +25,7 @@ passed to the next new stack frame (generated due to the recursive execution).
 want it to stop at some point, which is why we need to set up a **_base_** inside our recursive function. 
    - A base indicates the terminal of the current stack frame. When a recursive call reaches a base case, it does not make further recursive calls but starts returning.
 
-*But what happen to the previous functions? - Their information (local variables) is stored in their own stack frames, and
+*But what happen to the previous functions? - Their information (local variables and parameters) is stored in their own stack frames, and
 they are **_waiting_** the completion of the currently executing function call. 
 
 4. Once a recursive call reaches a base case or completes its computation, the program starts performing return operations. This involves 
