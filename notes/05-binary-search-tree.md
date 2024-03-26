@@ -87,5 +87,5 @@ Insertion operation and removal operation alone both are O(1).
     - <img src="./img/balanced.png" width = "400">
   - The worst case: 
     - <img src="./img/worst.png" width = "400">
-  
+
 So, what's the meaning of 'balanced'? - We will explore it at next chapter
