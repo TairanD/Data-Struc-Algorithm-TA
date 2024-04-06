@@ -43,6 +43,8 @@ The most important methods in the interface since it will be used in many other 
 Starting at node n:
 - If k is found, returning the node containing the entry with key k.
 - elif k is not found, returning the external node where the search ends.
+ 
+
 
 ```
 Algorithm find(k, n)

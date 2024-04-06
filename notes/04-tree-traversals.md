@@ -3,6 +3,7 @@
 
 1. [Definition](#1)
 2. [Recursion](#2)
+3. [Tree Traversal](#3)
 
 ## 1 - Definition <a name="1"></a>
 - The act of travelling through a tree visiting nodes is known as a **traversal**.
@@ -17,10 +18,10 @@ HAHA! Here it comes - **recursion**, one of the biggest troubles for beginners. 
 - Recursion: the process in which a function calls **itself**.
 
 Very simple definition right? I would like to illustrate the mechanism of a recursive function:
-1. When a recursive function is firstly executed, our computer creates a new data structure (called stack frame) to store 
+1. When a recursive function is firstly executed, our computer creates a new data structure (called **stack frame**) to store 
 all the information of the function, including parameters, addresses, etc. 
 2. When a recursive function calls itself, all the information will be stored in the current stack frame, and some will be
-passed to the next new stack frame (generated due to the recursive execution).
+passed to the next **new stack frame** (generated due to the recursive execution).
 3. Will a recursive function calls itself, and calls itself, and calls itself ...... Forever? Ofcourse not. We certainly 
 want it to stop at some point, which is why we need to set up a **_base_** inside our recursive function. 
    - A base indicates the terminal of the current stack frame. When a recursive call reaches a base case, it does not make further recursive calls but starts returning.
@@ -34,7 +35,7 @@ they are **_waiting_** the completion of the currently executing function call.
 5. During the execution of a recursive function, each recursive call returns a result. These results may be passed, 
 modified, or combined as part of the recursive process to compute the final result.
 
-## 3 - Tree Traversal
+## 3 - Tree Traversal  <a name="3"></a>
 I'm going to introduce three types of tree traversals. 
 
 Which type to use depends on what the tree represents.
