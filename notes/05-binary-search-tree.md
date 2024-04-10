@@ -69,7 +69,7 @@ To remove k from the tree:
 - if there is no node containing k: do nothing
 - elif there is a node _v_ containing k:
   - if node _v_ has only one internal child, we directly remove it (using [_remove(p)_](03-binary-trees.md)).
-  - elif node _v_ has only one internal child nodes:
+  - elif node _v_ has two internal child nodes:
     - we need to find the node _w_ containing next biggest value in the tree after k
     - copy the value of _w_ into _v_
     - remove _w_ and its left child _z_
