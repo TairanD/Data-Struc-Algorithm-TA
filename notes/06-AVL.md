@@ -35,7 +35,7 @@ inserted a node with key 54, the tree becomes unbalance:
 ### 3.2 - How to make unbalanced tree balanced again? - restructure
 Since we need to restore the height-balance property of the AVL tree, we need to **restructure** it.
 
-Let's label the crucial nodes in this restructuring process:
+Let's label the crucial nodes in this restructuring process: 
 1. _z_: the first unbalanced node encountered while travelling up the tree from the newly expanded node.
 2. _y_: the child of _z_ with larger height
 3. _x_: the child of _y_ with larger height
@@ -43,7 +43,27 @@ Let's label the crucial nodes in this restructuring process:
     <img src="img/labelled-avl.png" width = "300">
   </div>
 
-#### Two Cases of restructure
+There are two cases of restructuring operation: Single Rotation & Double Rotation. Each one represents a type of unbalanced tree structure (there will be 
+two and only these two types because every time we insert a node, a property check will be performed).
+
+#### 3.2.1 Single Rotation
+For single rotation, two types of structure might occur as diagram below, **where let (_a_, _b_, _c_) be an inorder listing of _x_, _y_, _z_** (i.e. a is smallest 
+value, followed by b, followed by c).<a name="setup"></a>
+
+It only requires one time of **_'rotation' (an intuitive expression for restructuring)_** to restore height-balance property.
+
+<img src="img/single-rotation.png" width = "600">
+
+
+#### 3.2.2 Double Rotation
+For single rotation, two types of structure might occur (diagram shown below).
+It only requires two times of **_'rotation'_** to restore height-balance property.
+
+<img src="img/double-rotation.png" width = "600">
+
+#### 3.2.3 What Happened Exactly?
+
+It's a little confusing right? Let's delve into the problem deeper.
 
 
 ## 4 - Removal
