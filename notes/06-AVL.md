@@ -16,8 +16,34 @@ by bad tree structure when they operate the tree (add, delete nodes), as the cla
 
 Therefore, it's our responsibility to balance the tree inside the class. Let's see what should we do.
 
-#### The following parts will be quite tedious, but it's highly possible to appear in your assignment.
+#### The following parts will be quite tedious, but it's necessary to complete your assignment.
 
-## 3 - Insertion
+## 3 - Insertion: put(k, v)
+### 3.1 - Begin with Expansion and Property Check
+Remember, AVL trees are self-balancing binary search tree, which means we can insert a new node just like a binary
+search tree (by comparing keys). The expected performance of this operation is O(log n).
+
+**Notice here!** As I said above, the key difference between AVL trees and common BSTs is that after insertion, we need
+to check if the height-balance property still holds:
+- we need to search upwards begin from the newly inserted node
+- for each node we visit, we check if whether its height-balance property holds by **compare the height** of its children
+  - if the difference in height between the two children is greater than 1, the tree becomes unbalanced! For example, after we
+inserted a node with key 54, the tree becomes unbalance:
+  <div align="center">
+    <img src="img/unbalanced-avl.png" width = "400">
+  </div>
+### 3.2 - How to make unbalanced tree balanced again? - restructure
+Since we need to restore the height-balance property of the AVL tree, we need to **restructure** it.
+
+Let's label the crucial nodes in this restructuring process:
+1. _z_: the first unbalanced node encountered while travelling up the tree from the newly expanded node.
+2. _y_: the child of _z_ with larger height
+3. _x_: the child of _y_ with larger height
+  <div align="center">
+    <img src="img/labelled-avl.png" width = "300">
+  </div>
+
+#### Two Cases of restructure
+
 
 ## 4 - Removal
