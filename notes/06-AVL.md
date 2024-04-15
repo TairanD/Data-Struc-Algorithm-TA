@@ -24,13 +24,13 @@ Remember, AVL trees are self-balancing binary search tree, which means we can in
 search tree (by comparing keys). The expected performance of this operation is O(log n).
 
 **Notice here!** As I said above, the key difference between AVL trees and common BSTs is that after insertion, we need
-to check if the height-balance property still holds:
+to check if the height-balance property still holds:<a name="check"></a>
 - we need to search upwards begin from the newly inserted node
 - for each node we visit, we check if whether its height-balance property holds by **compare the height** of its children
   - if the difference in height between the two children is greater than 1, the tree becomes unbalanced! For example, after we
 inserted a node with key 54, the tree becomes unbalance:
   <div align="center">
-    <img src="img/unbalanced-avl.png" width = "400">
+    <img src="img/unbalanced-avl.png" width = "400"><a name="54"></a>
   </div>
 ### 3.2 - How to make unbalanced tree balanced again? - restructure
 Since we need to restore the height-balance property of the AVL tree, we need to **restructure** it.
@@ -64,6 +64,18 @@ It only requires two times of **_'rotation'_** to restore height-balance propert
 #### 3.2.3 What Happened Exactly?
 
 It's a little confusing right? Let's delve into the problem deeper.
+**Question: why we label node _x_, _y_, _z_?**
+- Answer: Because we want to get the first three node leading to unbalanced, and starting from the unbalanced node we found in [property check](#check).
+By change their structure, we can restore height-balancing property (reducing its height!).
 
+Therefore, we can conclude a general rule for AVL tree insertion:
+1. Make b (middle value) the root of the subtree being restructured.
+2. Make a (the smallest value) the left child of b and make T0 and T1 its children
+3. Make c (the largest value) the right child of b and make T2 and T3 its children.
+### 3.2.4 After Insertion
+The subtrees attached to these nodes will be added as children in the same left-to-right order as before
+-> remaining the property of binary search tree! For example, the result of [inserting node with key 54](#54) is shown below:
+
+<img src="img/after-insertion.png">
 
 ## 4 - Removal
