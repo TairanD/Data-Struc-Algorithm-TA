@@ -62,14 +62,14 @@ Below is the pseudocode of the inorder traversal, which means visiting a node
 
 Inorder traversal only makes sense for binary trees.
 ```
-Algorithm preorder(T,v):
+Algorithm inorder(T,v):
     if v has a left child leftChild in T then
-        preorder(T,leftChild)
+        inorder(T,leftChild)
         
     perform the "visit" action for node v
     
     if v has a right child rightChild in T then
-        preorder(T,right)
+        inorder(T,right)
 ```
 
 ### 3.3 - Postorder Traversal
@@ -80,10 +80,10 @@ Postorder traversal can be used with any tree type.
 ```
 Algorithm postorder(T,v):
     if v has a left child leftChild in T then
-        preorder(T,leftChild)
+        postorder(T,leftChild)
     
     if v has a right child rightChild in T then
-        preorder(T,right)
+        postorder(T,right)
         
     perform the "visit" action for node v
 ```
