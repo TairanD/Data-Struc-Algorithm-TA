@@ -79,3 +79,36 @@ The subtrees attached to these nodes will be added as children in the same left-
 <img src="img/after-insertion.png">
 
 ## 4 - Removal
+Just like removal in binary search tree, when we want to remove a node _n_ in a tree:
+- if there is no node: do nothing
+- elif node _n_ is in the tree:
+  - if node _n_ has only one internal child, we directly remove it.
+  - elif node _n_ has two internal child nodes:
+    - we need to find the node _w_ containing next biggest value in the tree after _n_
+    - copy the value of _w_ into _n_
+    - remove _w_ and its left child
+
+Yet, we need to maintain the self-balancing property of the avl tree. Therefore, we should perform property check and
+restructure. 
+### 4.1 - Rebalancing after a Removal
+Similarly, let's define:
+- the first unbalanced node as _z_.
+- the child of _z_ with the larger height as _y_.
+- the child of _y_ with the larger height as _x_ (if y has children of equal heights, we choose the side 
+that will result in a single rotation).
+
+Then, we perform restructure(x) to restore balance at _z_.
+<img src="img/avl-removal.png">
+
+### 4.2 - Continuous Property Check!
+**ATTENTION**! 
+
+Unlike insertion, removal in AVL tree might require multiple restructure operations. Thus, we must **continue**
+checking for balance until the root of the tree is reached.
+- In the above case, 62 is the root, so we have balanced the tree!
+
+
+
+
+
+
