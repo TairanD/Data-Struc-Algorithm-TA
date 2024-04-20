@@ -1,5 +1,5 @@
 # AVL Tree
-(_**Updating**_)
+(_**Completed**_)
 
 ## 1 - Motivation
 In the last chapter, I introduced that the time performance of find method is best, `O(log n)`, when the binary search tree is balanced. 
