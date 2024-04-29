@@ -72,7 +72,7 @@ Therefore, we can conclude a general rule for AVL tree insertion:
 1. Make b (middle value) the root of the subtree being restructured.
 2. Make a (the smallest value) the left child of b and make T0 and T1 its children
 3. Make c (the largest value) the right child of b and make T2 and T3 its children.
-### 3.2.4 After Insertion
+#### 3.2.4 After Insertion
 The subtrees attached to these nodes will be added as children in the same left-to-right order as before
 -> remaining the property of binary search tree! For example, the result of [inserting node with key 54](#54) is shown below:
 
