@@ -1,5 +1,5 @@
 # Splay Tree
-(_**Completed**_)
+(_**Updating**_)
 
 ## 1 - Amortised Analysis
 In the previous chapters, we always estimate the time complexity of an algorithm based on the worst case. However, it is
