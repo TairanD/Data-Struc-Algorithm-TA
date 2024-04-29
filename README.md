@@ -12,6 +12,8 @@ insights. Additionally, I might add some contents I think useful/important.
 - [Binary Trees](./notes/03-binary-trees.md)
 - [Tree Traversals](./notes/04-tree-traversals.md)
 - [Binary Search Trees](./notes/05-binary-search-tree.md)
+- [AVL Tree](./notes/06-AVL.md)
+- [Splay Tree](./notes/07-splay-tree.md)
 
 If you have any problem, you can post your question on the Discussion part of this repo, or you can directly ask me in the lab. I hope
 this repo can help you understand the course better.
